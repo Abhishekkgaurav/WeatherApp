@@ -166,4 +166,7 @@ async function fetchSearchWeatherSection(city){
     }
     
 }
+document.addEventListener("click",()=>{
+    invalidCityMessage.classList.remove("invalidactive");
+});
 
