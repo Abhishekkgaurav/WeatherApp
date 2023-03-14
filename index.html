@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/weather-app.png" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="heading">WEATHER APP</h1>
+        <div class="tabmain">
+            <p user-tab class="tab">Your Weather</p>
+            <p search-tab class="tab">Search Weather</p>
+        </div>
+        <!--main section-->
+        <div class="mainsection">
+            <!--Grant access-->
+            <div class="grantaccess current-container">
+                <img src="./assets/location.png" width="80" height="80">
+                <h2>Grant Location Access</h2>
+                <p>Allow Access to get weather Information</p>
+                <button class="btn" access-btn>GRANT ACCESS</button>
+
+            </div>
+            <!--Loading-->
+            <div class="loadingsection current-container">
+                <img src="./assets/loading.gif" width="120" height="120">
+                <div>Loading</div>
+            </div>
+            <!--Search Form-->
+            <form class="searchweathersection">
+                <p class="invalidcity">Invalid City</p>
+                <input class="searchcity" type="text" placeholder="Search for city..." inputcityname>
+                <button class="submitbtn" type="submit">
+                    <img src="./assets/search.png" width="25" height="25">
+                </button>
+                
+            </form>
+            <!--Your weather-->
+            <div class="yourweathersection current-container">
+                <div class="userlocationname">
+                    <p user-location-name></p>
+                    <span>
+                        <img user-country>
+                    </span>
+                </div>
+                <div class="weatherinfotext" weather-info-text></div>
+                <img class="weatherinfoimg" weather-info-img>
+                <div class="weatherinfotemp" weather-temp></div>
+                <!-- three cards -->
+                <div class="cardcontainer">
+                    <div class="carditems">
+                    <img src="./assets/wind.png" width="40" height="40">
+                    <p>WINDSPEED</p>
+                    <p wind-info></p>
+                    </div>
+                    <div class="carditems">
+                        <img src="./assets/humidity.png" width="40" height="40">
+                        <p>HUMIDITY</p>
+                        <p humidity-info></p>
+                    </div>
+                    <div class="carditems">
+                        <img src="./assets/cloud.png" width="40" height="40">
+                        <p>CLOUDS</p>
+                        <p cloud-info></p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
